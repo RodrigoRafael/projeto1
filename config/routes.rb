@@ -1,4 +1,6 @@
 VotaPrato::Application.routes.draw do
+  resources :comentarios
+
   resources :qualificacaos
   resources :clientes
   match 'inicio' => 'restaurantes#index'
