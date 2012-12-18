@@ -1,5 +1,9 @@
 #coding:utf-8
 class Restaurante < ActiveRecord::Base
+    has_attached_file :foto, :styles => { :medium => "300x300>",
+                                          :thumb => "100x100>",
+                                          :original => "800x600>"}
+
   attr_accessible :nome, :endereco, :especialidade
 
   validates_presence_of :nome, message: "deve ser preenchido"
@@ -7,6 +11,7 @@ class Restaurante < ActiveRecord::Base
   validates_presence_of :especialidade, message: "deve ser preenchido"
   validates_uniqueness_of :nome, message: "nome já cadastrado"
   validates_uniqueness_of :endereco, message: "endereço já cadastrado"
+
 
 
   validate :primeira_letra_deve_ser_maiuscula

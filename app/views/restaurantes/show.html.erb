@@ -10,12 +10,18 @@
 	<b>Endereço: </b>
 	<%= @restaurante.endereco %>
 	</p>
+
 	
 	<p>
 
 	<b>Especialidade: </b>
 	<%= @restaurante.especialidade %>
 	</p>
+
+<p>
+<b>Foto:</b>
+<%= image_tag @restaurante.foto.url(:thumb) %>
+</p>
 
 	<b>Nota média: </b>
 	<%= @restaurante.qualificacaos.average(:nota) %><br/>
@@ -37,3 +43,4 @@
 <% end %>
 
 <%= novo_comentario(@restaurante) %>
+
