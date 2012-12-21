@@ -1,5 +1,7 @@
 body {
-  background-image: url('rb4/backgroundres.jpg');
+   background-image: -moz-linear-gradient(#B0E0E6, #EBC79E);
+  background-image: -webkit-linear-gradient(#B0E0E6, #EBC79E);
+  background-image: -o-linear-gradient(#B0E0E6, #EBC79E);
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -16,30 +18,33 @@ pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-}Listing clientes
-
-
+}
 
 a {
   color: #000;
   &:visited {
-    color: #666;
+    color: #333;
   }
   &:hover {
-    color: #FF0000;
-    background-color: #FFF;
+    color: #006699;
     font-size: 14px;
     text-transform: capitalize;
     font-family: Georgia;
-    -moz-transition: 0.2s linear;
-    -webkit-transition: 0.2s linear;
-    -o-transition: 0.2s linear;
+    -moz-transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
   }
+}
+
+table {
+  
+  background:rgba(255,255,153, 0.3)
 }
 
 div {
   &.field, &.actions {
     margin-bottom: 10px;
+
   }
 }
 
@@ -51,6 +56,7 @@ div {
   padding: 2px;
   background-color: red;
   display: table;
+
 }
 
 #error_explanation {
