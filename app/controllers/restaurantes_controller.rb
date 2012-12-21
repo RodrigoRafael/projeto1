@@ -15,7 +15,7 @@ end
 	def create
 		@restaurante = Restaurante.new(params[:restaurante])
 		if @restaurante.save
-		redirect_to(action: "show", id: @restaurate)
+		redirect_to(action: "show", id: @restaurante)
 	else
 		render action: "new"
 	end

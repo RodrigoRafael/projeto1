@@ -1,5 +1,5 @@
 body {
-  background-image: url(rb4/backgroundres.jpg);
+  background-image: url('rb4/backgroundres.jpg');
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -16,7 +16,9 @@ pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-}
+}Listing clientes
+
+
 
 a {
   color: #000;
@@ -27,8 +29,11 @@ a {
     color: #FF0000;
     background-color: #FFF;
     font-size: 14px;
+    text-transform: capitalize;
     font-family: Georgia;
-    -moz-transition: 0.5s linear;
+    -moz-transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
   }
 }
 
