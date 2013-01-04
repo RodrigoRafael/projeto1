@@ -2,7 +2,7 @@ module ApplicationHelper
 	
 	
 	def menu_principal
-		menu = %w(Cliente Qualificacao Restaurantes)
+		menu = %w(Cliente Comentario Qualificacao Restaurantes)
 		menu_principal = "<ul>"
 		
 		menu.each do |item|

@@ -1,22 +1,51 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ohh Diliça...</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div align="center">
+		<div>
+			<img src="http://imageshack.us/a/img198/5968/titulotf.png">
+		</div>
+		
+
+	</div>
+	<div class="body">
+		<div>
+			<div class="header">
+				<ul>
+					<li>
+						<a href="http://localhost:3000/Clientes">Clientes</a>
+					</li>
+					<li>
+						<a href="http://localhost:3000/Comentarios">Comentários</a>
+					</li>
+					<li>
+						<a href="http://localhost:3000/Qualificacaos">Qualificações</a>
+					</li>
+					<li>
+						<a href="http://localhost:3000/Restaurantes"><font color="#006699">Restaurantes</a></font>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="body">
+				
+				<div height="425" width="708">
+					<table height="425" width="708" background="http://imageshack.us/a/img819/4815/clienten.jpg"><tr>
+						<td>
+
 	<%= render partial: "titulo" %>
 
 	<h1>Exibindo Restaurante</h1>
-	<p>
 	<b>Nome: </b>
 	<%= @restaurante.nome %>
-	</p>
-
-	<p>
 	<b>Endereço: </b>
 	<%= @restaurante.endereco %>
-	</p>
-
-	
-	<p>
-
 	<b>Especialidade: </b>
 	<%= @restaurante.especialidade %>
-	</p>
 
 <p>
 <b>Foto:</b>
@@ -44,4 +73,22 @@
 
 <%= novo_comentario(@restaurante) %>
 
-<img src ="http://www.wanderemocoes.com.br/garcom.png" align="right">
+						</td>
+					</tr></table>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div><div width="200">
+					<table height="200" width="200" background="http://imageshack.us/a/img10/9413/balaoe.png">
+						<tr>
+						<td>
+						 <h2>&nbsp;&nbsp;&nbsp;&nbsp;Restaurantes</h2></td>
+					</tr></table>
+				<img src="http://imageshack.us/a/img823/6887/borderhorizontal.gif">
+				<img src="http://imageshack.us/a/img841/6770/waiterstanding.gif">
+				Projeto Realizado por Rodrigo e Vinicius. 
+				Ruby Three Cotia.
+	</div>
+</body>
+</html>
