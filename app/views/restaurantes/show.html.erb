@@ -1,50 +1,34 @@
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Ohh Diliça...</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Restaurantes</title>
+	<meta content="charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
 </head>
 <body>
-	<div align="center">
-		<div>
-			<img src="http://imageshack.us/a/img198/5968/titulotf.png">
-		</div>
-		
-
-	</div>
-	<div class="body">
-		<div>
-			<div class="header">
+	<div id="page">
+		<div id="headerres">
+			<div class="background">
+				<h1><a href="#">Vota Prato</a></h1>
 				<ul>
-					<li>
-						<a href="http://localhost:3000/Clientes">Clientes</a>
-					</li>
-					<li>
-						<a href="http://localhost:3000/Comentarios">Comentários</a>
-					</li>
-					<li>
-						<a href="http://localhost:3000/Qualificacaos">Qualificações</a>
-					</li>
-					<li>
-						<a href="http://localhost:3000/Restaurantes"><font color="#006699">Restaurantes</a></font>
-					</li>
-					
+					<li><a href="http://localhost:3000/Clientes">Clientes</a></li>
+					<li><a href="http://localhost:3000/Comentarios">Comentários</a></li>
+					<li class="active"><a href="http://localhost:3000/Restaurantes">Restaurantes</a></li>
+					<li><a href="http://localhost:3000/Qualificacaos">Qualificações</a></li>
 				</ul>
 			</div>
-			<div class="body">
-				
-				<div height="425" width="708">
-					<table height="425" width="708" background="http://imageshack.us/a/img819/4815/clienten.jpg"><tr>
-						<td>
-
-	<%= render partial: "titulo" %>
+		</div>
+		<div id="giz">
+			<div id="quadroesquerda">
+				<div class="block">
+					<div class="block-top"></div>
+					<div class="block-content">	<%= render partial: "titulo" %>
 
 	<h1>Exibindo Restaurante</h1>
-	<b>Nome: </b>
+	Nome: </b>
 	<%= @restaurante.nome %>
-	<b>Endereço: </b>
+	Endereço: </b>
 	<%= @restaurante.endereco %>
-	<b>Especialidade: </b>
+	Especialidade: 
 	<%= @restaurante.especialidade %>
 
 <p>
@@ -72,23 +56,24 @@
 <% end %>
 
 <%= novo_comentario(@restaurante) %>
-
-						</td>
-					</tr></table>
+</div>
+					<div class="block-bottom"></div>
 				</div>
 			</div>
+			<div id="quadrodireita">
+				<div class="block">
+					<div class="block-top"></div>
+					<div class="block-content">
+						Trabalho Realizado por Rodrigo e Vinicius.
+						<br>
+						<br>
+						Ruby Three Cotia.
+					</div>
+					<div class="block-bottom"></div>
+				</div>
+
+	
+			</div>
 		</div>
-		<div>
-			<div><div width="200">
-					<table height="200" width="200" background="http://imageshack.us/a/img10/9413/balaoe.png">
-						<tr>
-						<td>
-						 <h2>&nbsp;&nbsp;&nbsp;&nbsp;Restaurantes</h2></td>
-					</tr></table>
-				<img src="http://imageshack.us/a/img823/6887/borderhorizontal.gif">
-				<img src="http://imageshack.us/a/img841/6770/waiterstanding.gif">
-				Projeto Realizado por Rodrigo e Vinicius. 
-				Ruby Three Cotia.
-	</div>
 </body>
 </html>
