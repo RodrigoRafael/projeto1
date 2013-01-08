@@ -79,6 +79,7 @@ else
   respond_to do |format|
 format.xml { head :ok }
 format.js { head :ok }
+redirect_to(action: "comentarios")
 
     end
   end
