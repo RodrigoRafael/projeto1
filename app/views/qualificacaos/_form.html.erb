@@ -10,8 +10,7 @@
       </ul>
     </div>
   <% end %>
-
-    <% if @qualificacao.cliente %>
+  <% if @qualificacao.cliente %>
     <%= f.hidden_field 'cliente_id' %>
     <% else %>
     <p><%= f.label :cliente_id %><br />
@@ -19,7 +18,7 @@
       <% end %>
 
   </div>
-  <div class="field">
+    <div class="field">
     <% if @qualificacao.restaurante %>
 <%= f.hidden_field 'restaurante_id' %>
 <% else %>

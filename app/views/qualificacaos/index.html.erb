@@ -38,8 +38,8 @@
 
 <% @qualificacoes.each do |qualificacao| %>
   <tr>
-    <td><%= qualificacao.cliente_id %></td>
-    <td><%= qualificacao.restaurante_id  %></td>
+    <td><%= qualificacao.cliente.nome %></td>
+    <td><%= qualificacao.restaurante_id %></td>
     <td><%= qualificacao.nota %></td>
     <td><%= qualificacao.valor_gasto %></td>
     <td><%= link_to 'Show', qualificacao %></td>
@@ -53,4 +53,26 @@
 <center>
 <%= link_to 'New Qualificacao', new_qualificacao_path %>
 </center>
+
+</div>
+          <div class="block-bottom"></div>
+        </div>
+      </div>
+      <div id="quadrodireita">
+        <div class="block">
+          <div class="block-top"></div>
+          <div class="block-content">
+            Trabalho Realizado por Rodrigo e Vinicius.
+            <br>
+            <br>
+            Ruby Three Cotia.
+          </div>
+          <div class="block-bottom"></div>
+        </div>
+
+  
+      </div>
+    </div>
+</body>
+</html>
 
