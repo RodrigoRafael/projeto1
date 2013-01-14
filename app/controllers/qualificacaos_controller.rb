@@ -2,11 +2,11 @@ class QualificacaosController < ApplicationController
   # GET /qualificacoes
   # GET /qualificacoes.json
   def index
-    @qualificacoes = Qualificacao.all
+    @qualificacaos = Qualificacao.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml { render xml: @qualificacoes }
+      format.xml { render xml: @qualificacaos }
     end
   end
 
@@ -78,6 +78,14 @@ end
 
   # DELETE /qualificacoes/1
   # DELETE /qualificacoes/1.json
- 
+  def destroy
+    @qualificacao =  Qualificacao.find(params[:id])
+    @qualificacao.destroy
+
+    respond_to do |format|
+      format.html { redirect_to qualificacaos_url }
+      format.json {head :no_content }
+    end
+  end
   end
 

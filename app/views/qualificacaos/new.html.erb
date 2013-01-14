@@ -1,19 +1,18 @@
 <html>
 <head>
-<title>Qualificações</title>
+<title>Comentários</title>
 	<meta content="charset=utf-8">
-	<link rel="stylesheet" type="text/css" href="css/css.css">
 </head>
 <body>
 	<div id="page">
-		<div id="headerqua">
+		<div id="headercom">
 			<div class="background">
 				<h1><a href="#">Vota Prato</a></h1>
 				<ul>
 					<li><a href="http://localhost:3000/Clientes">Clientes</a></li>
-					<li><a href="http://localhost:3000/Comentarios">Comentários</a></li>
+					<li class="active"><a href="http://localhost:3000/Comentarios">Comentários</a></li>
 					<li><a href="http://localhost:3000/Restaurantes">Restaurantes</a></li>
-					<li class="active"><a href="http://localhost:3000/Qualificacaos">Qualificações</a></li>
+					<li><a href="http://localhost:3000/Qualificacaos">Qualificações</a></li>
 				</ul>
 			</div>
 		</div>
@@ -22,13 +21,11 @@
 				<div class="block">
 					<div class="block-top"></div>
 					<div class="block-content">
-
-						<h1>Nova qualificacao</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', qualificacaos_path %>
-</div>
+						<div>
+						<h1>Novo Qualificação</h1>
+						<%= render 'form' %>
+						<%= link_to 'Back', qualificacaos_path %>
+					</div>
 					<div class="block-bottom"></div>
 				</div>
 			</div>

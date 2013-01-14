@@ -35,10 +35,11 @@
 </ul>
 <% end %>
 <%= form_for :restaurante, url: {action: 'update',
-id: @restaurante} do |f| %>
+id: @restaurante}, :html => {:multipart => true} do |f| %>
 Nome: <%= f.text_field :nome %><br/>
 Endereço: <%= f.text_field :endereco %><br/>
 Especialidade: <%= f.text_field :especialidade %><br/>
+Foto: <%= f.file_field :foto %> <br/>
 <%= submit_tag 'Atualizar' %>
 <% end %>
 <%= link_to 'Voltar', action: 'index' %>

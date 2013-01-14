@@ -27,11 +27,6 @@
 						<%= render partial: "titulo" %>
 
 <h1>Adicionando Restaurante</h1>
-<%= form_for :restaurantes, :url => {:action=>'create'},
-							:html => {:multipart=>true} do |f| %>
-<!--outros campos-->
-<%= f.file_field :foto %>
-<% end %>
 <% if @restaurante.errors.any? %>
 <ul>
 <% @restaurante.errors.full_messages.each do |msg| %>
@@ -39,11 +34,11 @@
 <% end %>
 </ul>
 <% end %>
-<%= form_for :restaurante, url: {action: 'create'} do |f| %>
+<%= form_for :restaurante, url: {action: 'create'}, :html => {:multipart => true} do |f| %>
 Nome: <%= f.text_field :nome %><br/>
 Endereço: <%= f.text_field :endereco %><br/>
 Especialidade: <%= f.text_field :especialidade %><br/>
-
+Foto: <%= f.file_field :foto %> </br>
 
 <%= submit_tag 'Criar' %>
 

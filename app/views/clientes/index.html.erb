@@ -1,5 +1,6 @@
 <html>
 <head>
+  <link rel="shortcut icon" href="img/favicon.ico" type="favicon"/>
 <title>Clientes</title>
   <meta content="charset=utf-8">
 </head>
@@ -41,6 +42,7 @@
     <td><%= cliente.idade %></td>
     <td><%= link_to 'Mostrar', cliente %></td>
     <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
+     <td><%= link_to 'Deletar', cliente, method: :delete, data: { confirm: 'Tem certeza ?' } %></td>
   </tr>
 <% end %>
 </table>
