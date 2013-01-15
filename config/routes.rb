@@ -4,7 +4,7 @@ VotaPrato::Application.routes.draw do
   resources :qualificacaos
   resources :clientes
   match 'inicio' => 'restaurantes#index'
-  
+  root :to => "restaurantes#index" 
 
 match 'rack',
 :to => proc{|env| [200, {"Content-Type" => "text/html"},
