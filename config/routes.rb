@@ -1,14 +1,17 @@
 VotaPrato::Application.routes.draw do
+  devise_for :users
+
   resources :comentarios
+  resources :restaurantes
 
   resources :qualificacaos
   resources :clientes
-  match 'inicio' => 'restaurantes#index'
+  #match 'inicio' => 'restaurantes#index'
   root :to => "restaurantes#index" 
 
-match 'rack',
-:to => proc{|env| [200, {"Content-Type" => "text/html"},
-["App Rack numa rota Rails"]]}
+
+#:to => proc{|env| [200, {"Content-Type" => "text/html"},
+#["App Rack numa rota Rails"]]}
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -7,6 +7,28 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+		<div id="giz">
+			<div id="quadrocima" align="center">
+				<div class="block">
+					<div class="block-top"></div>
+					<div class="block-content">
+
+	<div>
+  <% if user_signed_in? %>
+    Logado como <%= current_user.email %>. Não é você?
+    <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Registrar", new_user_registration_path %> or
+    <%= link_to "Entrar", new_user_session_path %>
+  <% end %>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
 </head>
 <body>
 

@@ -25,6 +25,7 @@ end
 gem 'jquery-rails'
 gem 'paperclip'
 gem 'kaminari'
+gem 'devise'
 
 
 

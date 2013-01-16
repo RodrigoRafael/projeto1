@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Restaurantes</title>
+	<meta content="charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+	<div id="page">
+		<div id="headerlogin">
+			<div class="background">
+				<h1><a href="#">Vota Prato</a></h1>
+				<ul>
+					<li><a href="http://localhost:3000/users/sign_in">Clientes</a></li>
+					<li><a href="http://localhost:3000/users/sign_in">Comentários</a></li>
+					<li><a href="http://localhost:3000/users/sign_in">Restaurantes</a></li>
+					<li><a href="http://localhost:3000/users/sign_in">Qualificações</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<div id="giz">
+			<div id="quadroabaixo" align="center">
+				<div class="block">
+					<div class="block-top"></div>
+					<div class="block-content">
+
+						<h2>Forgot your password?</h2>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.submit "Send me reset password instructions" %></div>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>
+	</div>
+
+					<div class="block-bottom"></div>
+				</div>
+			</div>
+		</div>

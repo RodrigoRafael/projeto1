@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Restaurantes</title>
+	<meta content="charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+	<div id="page">
+		<div id="headerlogin">
+			<div class="background">
+				<h1><a href="#">Vota Prato</a></h1>
+				<ul>
+					<li><a href="http://localhost:3000/users/sign_in">Clientes</a></li>
+					<li><a href="http://localhost:3000/users/sign_in">Comentários</a></li>
+					<li><a href="http://localhost:3000/users/sign_in">Restaurantes</a></li>
+					<li><a href="http://localhost:3000/users/sign_in">Qualificações</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<div id="giz">
+		<div id="quadroabaixo" align="center">
+				<div class="block">
+					<div class="block-top"></div>
+					<div class="block-content">
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+<br/>
+  <% if devise_mapping.rememberable? -%>
+  <div><%= f.submit "Entrar" %>
+    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+  <% end -%>
+</div>
+<% end %>
+<br/>
+<br/>
+<div><%= render :partial => "devise/shared/links" %></div>
+					</div>
+
+					<div class="block-bottom"></div>
+				</div>
+			</div>
+		</div>

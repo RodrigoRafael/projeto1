@@ -45,7 +45,7 @@
 <%= link_to 'Editar', action: 'edit', id: restaurante %>
 </td>
 <td>
-<%= link_to 'Deletar', action: 'destroy', id: restaurante%>
+<td><%= link_to 'Deletar', restaurante, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
 </td>
 </tr>
 <% end %>

@@ -1,4 +1,5 @@
 class RestaurantesController < ApplicationController
+	before_filter :authenticate_user!
 	def index
 		@restaurantes = Restaurante.order("nome").page(params['page']).per(3)
 	end
