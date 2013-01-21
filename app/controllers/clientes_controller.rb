@@ -1,4 +1,5 @@
 class ClientesController < ApplicationController
+  before_filter :authenticate_user!
   respond_to :html, :xml
   # GET /clientes
   # GET /clientes.xml
